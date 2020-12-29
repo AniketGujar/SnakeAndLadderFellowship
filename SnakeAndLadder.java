@@ -7,6 +7,7 @@ public class SnakeAndLadder {
 	static int position;
 	static int diceRoll;
 	static int optionDice;
+	static int diceRollCount;
 	public SnakeAndLadder() {
 		position = 0;
 		System.out.println("Welcome to Snake and Ladder Game");
@@ -14,8 +15,9 @@ public class SnakeAndLadder {
 	public void diceRoll() {
 		Random rand = new Random();
 		diceRoll = rand.nextInt(6)+1;
-		System.out.println("Dice Rolled: "+ diceRoll);
-	}
+		diceRollCount++;
+		System.out.println("No. of Times Dice Rolled "+ diceRollCount +" : " + diceRoll);
+	} 
 	public void option() {
 		Random rand = new Random();
 		optionDice = rand.nextInt(3);
