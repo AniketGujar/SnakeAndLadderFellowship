@@ -39,8 +39,10 @@ public class SnakeAndLadder {
 	public static void main(String[] args) {
 		SnakeAndLadder obj = new SnakeAndLadder();
 		System.out.println("Player at " + position + " position");
+		while(position <100) {
 		obj.diceRoll();
 		obj.option();
 		System.out.println("Player at " + position + " position");
+		}
 	}
 }
