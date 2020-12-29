@@ -22,18 +22,21 @@ public class SnakeAndLadder {
 		
 		switch(optionDice) {
 		case 0:
-				System.out.println("Option-No Play");
+			System.out.println("Option-No Play");
 		break;
 		case 1:
-				System.out.println("Option-Ladder");
-				position = position + diceRoll;
+			System.out.println("Option-Ladder");
+			position = position + diceRoll;
+			if (position >100) {
+				position = position - diceRoll;
+			}
 		break;
 		case 2:
-				System.out.println("Option-Snake");
-				position = position - diceRoll;
-				if (position < 0) {
-					position = 0;
-				}
+			System.out.println("Option-Snake");
+			position = position - diceRoll;
+			if (position < 0) {
+				position = 0;
+			}
 		}
 	}
 	public static void main(String[] args) {
